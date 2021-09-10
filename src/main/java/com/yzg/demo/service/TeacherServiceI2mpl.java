@@ -4,6 +4,7 @@ import com.yzg.demo.model.ApiError;
 import com.yzg.demo.model.Either;
 import com.yzg.demo.model.Student;
 import com.yzg.demo.model.Teacher;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,6 +12,8 @@ import java.util.concurrent.CompletableFuture;
 
 import static java.util.concurrent.CompletableFuture.completedFuture;
 
+
+@Service
 public class TeacherServiceI2mpl {
     Student a = new Student(1, "sat", "zhangsan", "1");
     Student b = new Student(2, "hhh", "lisi", "2");
