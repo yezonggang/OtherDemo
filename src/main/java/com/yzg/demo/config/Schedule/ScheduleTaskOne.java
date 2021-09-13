@@ -11,8 +11,8 @@ import java.time.LocalDateTime;
 @Configuration
 // 定时任务
 @EnableScheduling
-public class SaticScheduleTask {
-    private final Logger logger= LoggerFactory.getLogger(SaticScheduleTask.class);
+public class ScheduleTaskOne {
+    private final Logger logger= LoggerFactory.getLogger(ScheduleTaskOne.class);
     // 秒分时日月周
     @Scheduled(cron = "0/7 * * * * ?")
     private void configureTasks() {

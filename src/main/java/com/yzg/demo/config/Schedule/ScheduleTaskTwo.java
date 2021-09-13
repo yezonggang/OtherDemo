@@ -17,7 +17,7 @@ import java.util.concurrent.ExecutionException;
 
 @Configuration
 @EnableScheduling
-public class DynamicScheduleTask implements SchedulingConfigurer {
+public class ScheduleTaskTwo implements SchedulingConfigurer {
 
     @Autowired
     TeacherServiceImpl teacherimpl; //实际业务操作
@@ -27,7 +27,7 @@ public class DynamicScheduleTask implements SchedulingConfigurer {
 
     @Override
     public void configureTasks(ScheduledTaskRegistrar taskRegistrar) {
-        final Logger logger= LoggerFactory.getLogger(DynamicScheduleTask.class);
+        final Logger logger= LoggerFactory.getLogger(ScheduleTaskTwo.class);
 
         taskRegistrar.addTriggerTask(
                 () -> {
