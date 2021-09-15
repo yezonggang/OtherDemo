@@ -23,7 +23,7 @@ public class UserController {
 	TokenService tokenService;
 
 	// 登录
-	@ApiOperation(value = "登陆", notes = "登陆")
+	@ApiOperation(value = "xxxx", notes = "tttt")
 	@PostMapping("/login")
 	public String login(HttpServletResponse response,
 						@RequestBody User inputUser) throws JSONException {
@@ -47,7 +47,7 @@ public class UserController {
 
 	@UserLoginToken
 	@ApiOperation(value = "获取信息", notes = "获取信息")
-	@GetMapping("/getMessage")
+	@GetMapping("/checkNow")
 	public String getMessage() {
 		// 取出token中带的用户id 进行操作
 		System.out.println(TokenUtils.getTokenUserId());
