@@ -17,11 +17,13 @@ public class UserServiceImpl {
         User user1=new User("fdla","yzg","123456");
         User user2=new User("fjewpq","zgy","654321");
         User user3=new User("lgag2","gyz","152346");
+        User user4=new User("admin","admin","111111");
 
         List<User> userList=new ArrayList<User>();
         userList.add(user1);
         userList.add(user2);
         userList.add(user3);
+        userList.add(user4);
         return userList;
     }
 
@@ -32,4 +34,5 @@ public class UserServiceImpl {
 
         return initUserData().stream().filter(i->i.getId().equals(userId)).collect(Collectors.toList()).get(0);
     }
+
 }

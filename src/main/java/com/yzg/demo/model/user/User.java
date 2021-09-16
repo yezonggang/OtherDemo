@@ -8,9 +8,9 @@ import lombok.Data;
 public class User {
     @JsonProperty("id")
     String id;
-    @JsonProperty("name")
+    @JsonProperty("username")
     String username;
-    @JsonProperty("passwd")
+    @JsonProperty("password")
     String passwd;
     String tel;
     String email;

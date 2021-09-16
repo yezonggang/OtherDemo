@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.lang.reflect.Method;
 
 public class AuthUserInterceptor implements HandlerInterceptor {
-    @Autowired
+    /*@Autowired
     UserServiceImpl userService;
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object object) throws Exception {
@@ -73,5 +73,6 @@ public class AuthUserInterceptor implements HandlerInterceptor {
     public void afterCompletion(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, Exception e) throws Exception {
 
     }
+    */
 }
 

@@ -2,7 +2,9 @@ package com.yzg.demo.controller;
 
 import com.yzg.demo.annotation.PassToken;
 import com.yzg.demo.annotation.UserLoginToken;
+import com.yzg.demo.model.reponse.BaseResponse;
 import com.yzg.demo.model.user.User;
+import com.yzg.demo.service.RoleServiceImpl;
 import com.yzg.demo.service.TokenService;
 import com.yzg.demo.service.UserServiceImpl;
 import com.yzg.demo.utils.TokenUtils;
@@ -16,16 +18,20 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 
 @RestController
+@RequestMapping("/vue-element-admin/user")
 public class UserController {
 	@Autowired
 	UserServiceImpl userService;
 	@Autowired
 	TokenService tokenService;
 
+	@Autowired
+	RoleServiceImpl roleService;
 	// 登录
-	@ApiOperation(value = "xxxx", notes = "tttt")
+	@ApiOperation(value = "登录接口", notes = "登录接口")
 	@PostMapping("/login")
-	public String login(HttpServletResponse response,
+	@ResponseBody
+	public BaseResponse login(HttpServletResponse response,
 						@RequestBody User inputUser) throws JSONException {
 		User userForBase = new User();
 		inputUser.getUsername();
@@ -34,18 +40,34 @@ public class UserController {
 		userForBase.setPasswd(userService.findByUsername(inputUser).getPasswd());
 		if (!userForBase.getPasswd().equals(inputUser.getPasswd())) {
 			String info="登录失败,密码错误";
-			return info;
+			return BaseResponse.success(info);
 		} else {
 			String token = tokenService.getToken(userForBase);
 			String info=token;
 			Cookie cookie = new Cookie("token", token);
 			cookie.setPath("/");
 			response.addCookie(cookie);
-			return info;
+			return BaseResponse.success(info);
 		}
 	}
 
-	@UserLoginToken
+
+	// 验证
+	@ApiOperation(value = "info", notes = "info")
+	@GetMapping("/info")
+	@ResponseBody
+	public BaseResponse getInfo(){
+		return BaseResponse.success(roleService.getRoleFromToken(""));
+	}
+
+	//logout
+	@ApiOperation(value = "logout", notes = "logout")
+	@PostMapping("/logout")
+	@ResponseBody
+	public BaseResponse logout(){
+		return BaseResponse.success("退出");
+	}
+
 	@ApiOperation(value = "获取信息", notes = "获取信息")
 	@GetMapping("/checkNow")
 	public String getMessage() {
@@ -54,5 +76,7 @@ public class UserController {
 
 		return "您已通过验证";
 	}
+
+
 }
 
