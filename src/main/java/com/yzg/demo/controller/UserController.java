@@ -1,5 +1,4 @@
 package com.yzg.demo.controller;
-
 import com.yzg.demo.annotation.PassToken;
 import com.yzg.demo.annotation.UserLoginToken;
 import com.yzg.demo.model.reponse.BaseResponse;
@@ -13,7 +12,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 
