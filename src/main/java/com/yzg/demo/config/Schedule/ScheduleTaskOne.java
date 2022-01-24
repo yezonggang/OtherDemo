@@ -14,8 +14,8 @@ import java.time.LocalDateTime;
 public class ScheduleTaskOne {
     private final Logger logger= LoggerFactory.getLogger(ScheduleTaskOne.class);
     // 秒分时日月周
-    @Scheduled(cron = "0/7 * * * * ?")
+    @Scheduled(cron = "0/55 * * * * ?")
     private void configureTasks() {
-        logger.info("定时任务每7秒打印: " + LocalDateTime.now());
+        logger.info("定时任务每55秒打印: " + LocalDateTime.now());
     }
 }
