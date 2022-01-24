@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @RestController
 @RequestMapping("/vue-element-admin/user")
-public class UserController {
+public class VueUserController {
 	@Autowired
 	UserServiceImpl userService;
 	@Autowired
