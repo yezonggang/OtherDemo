@@ -1,4 +1,4 @@
-package com.yzg.demo.service;
+package com.yzg.demo.service.vue;
 import com.yzg.demo.model.user.Role;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;

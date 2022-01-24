@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class CrontableImpl {
 
-    Crontable cron=new Crontable(1,"0/7 * * * * ?");
+    Crontable cron=new Crontable(1,"0/55 * * * * ?");
     public String getCronInfo(){
         return cron.getInfo();
     }
