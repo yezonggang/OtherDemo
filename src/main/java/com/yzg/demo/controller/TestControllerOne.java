@@ -2,6 +2,7 @@ package com.yzg.demo.controller;
 
 
 import com.yzg.demo.model.Student;
+import com.yzg.demo.service.StudentNewService;
 import com.yzg.demo.service.TeacherServiceImpl;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -18,11 +19,23 @@ public class TestControllerOne {
     @Autowired
     TeacherServiceImpl teacherimpl;
 
+    @Autowired
+    StudentNewService studentNewService;
+    //直接获取模拟数据
     @GetMapping("/getStudent")
     @ApiOperation(value = "查询学生", notes = "xzxxxx")
 
     public List<Student> getStudent() throws ExecutionException, InterruptedException {
         return teacherimpl.getStudents().get();
     }
+
+    // 用mybaits-plus从数据库中取数据
+    @GetMapping("/getStudentByMybatisPlus")
+    @ApiOperation(value = "查询学生", notes = "xzxxxx")
+
+    public String getStudentByID() {
+        return studentNewService.getItemTest();
+    }
+
 
 }
