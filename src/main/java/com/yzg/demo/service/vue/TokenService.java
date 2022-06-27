@@ -2,7 +2,7 @@ package com.yzg.demo.service.vue;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
-import com.yzg.demo.model.user.User;
+import com.yzg.demo.model.entitiy.user.User;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;

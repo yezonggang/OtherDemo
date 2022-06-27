@@ -1,6 +1,6 @@
 package com.yzg.demo.service;
 
-import com.yzg.demo.model.Crontable;
+import com.yzg.demo.model.entitiy.Crontable;
 import org.springframework.stereotype.Service;
 
 @Service

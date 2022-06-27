@@ -1,9 +1,9 @@
 package com.yzg.demo.service;
 
-import com.yzg.demo.model.ApiError;
-import com.yzg.demo.model.Either;
-import com.yzg.demo.model.Student;
-import com.yzg.demo.model.Teacher;
+import com.yzg.demo.model.reponse.ApiError;
+import com.yzg.demo.model.reponse.Either;
+import com.yzg.demo.model.entitiy.Student;
+import com.yzg.demo.model.entitiy.Teacher;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

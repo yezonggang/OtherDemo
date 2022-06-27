@@ -1,4 +1,4 @@
-package com.yzg.demo.model.user;
+package com.yzg.demo.model.entitiy.user;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;

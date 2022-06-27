@@ -1,6 +1,6 @@
 package com.yzg.demo.controller;
 import com.yzg.demo.model.reponse.BaseResponse;
-import com.yzg.demo.model.user.User;
+import com.yzg.demo.model.entitiy.user.User;
 import com.yzg.demo.service.vue.RoleServiceImpl;
 import com.yzg.demo.service.vue.TokenService;
 import com.yzg.demo.service.vue.UserServiceImpl;

@@ -1,4 +1,4 @@
-package com.yzg.demo.model;
+package com.yzg.demo.model.reponse;
 
 public class ApiError {
     private static String errorname;

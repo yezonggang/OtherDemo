@@ -1,4 +1,4 @@
-package com.yzg.demo.model.user;
+package com.yzg.demo.model.entitiy.user;
 
 
 import java.util.List;

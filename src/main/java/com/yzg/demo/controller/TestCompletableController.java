@@ -1,15 +1,12 @@
 package com.yzg.demo.controller;
 
 
-import com.yzg.demo.model.ResponseData;
-import com.yzg.demo.model.Student;
-import com.yzg.demo.model.Teacher;
+import com.yzg.demo.model.reponse.ResponseData;
+import com.yzg.demo.model.entitiy.Student;
+import com.yzg.demo.model.entitiy.Teacher;
 import com.yzg.demo.service.TeacherServiceI2mpl;
 import com.yzg.demo.service.TeacherServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 
 import java.util.*;
 import java.util.concurrent.CompletableFuture;
@@ -23,7 +20,7 @@ import static java.util.concurrent.CompletableFuture.completedFuture;
  *
  */
 
-public class TestCompletableOpration {
+public class TestCompletableController {
 
     @Autowired
     static TeacherServiceImpl teacherService;

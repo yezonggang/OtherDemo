@@ -1,4 +1,6 @@
-package com.yzg.demo.model;
+package com.yzg.demo.model.entitiy;
+
+import com.yzg.demo.model.entitiy.Student;
 
 import java.util.List;
 

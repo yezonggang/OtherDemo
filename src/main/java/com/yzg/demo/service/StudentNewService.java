@@ -1,6 +1,6 @@
 package com.yzg.demo.service;
 
-import com.yzg.demo.mapper.students.StudentNewMapper;
+import com.yzg.demo.mapper.StudentNewMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
